@@ -1,0 +1,402 @@
+{
+  "Name": "multisectionreport1",
+  "Width": "0in",
+  "Layers": [
+    {
+      "Name": "default"
+    }
+  ],
+  "CustomProperties": [
+    {
+      "Name": "DisplayType",
+      "Value": "Page"
+    },
+    {
+      "Name": "SizeType",
+      "Value": "Default"
+    },
+    {
+      "Name": "PaperOrientation",
+      "Value": "Portrait"
+    }
+  ],
+  "Page": {
+    "PageWidth": "8.5in",
+    "PageHeight": "11in",
+    "RightMargin": "0in",
+    "LeftMargin": "0in",
+    "TopMargin": "0in",
+    "BottomMargin": "0in",
+    "Columns": 1,
+    "ColumnSpacing": "0.5in"
+  },
+  "DataSources": [
+    {
+      "Name": "DataSource",
+      "ConnectionProperties": {
+        "DataProvider": "JSON",
+        "ConnectString": "endpoint=http://127.0.0.1:8000/api/listFloorBuilding/1"
+      }
+    }
+  ],
+  "ReportSections": [
+    {
+      "Type": "Continuous",
+      "Name": "ContinuousSection1",
+      "Page": {
+        "PageWidth": "8.5in",
+        "PageHeight": "11in",
+        "RightMargin": "1in",
+        "LeftMargin": "1in",
+        "TopMargin": "1in",
+        "BottomMargin": "1in",
+        "Columns": 1,
+        "ColumnSpacing": "0in"
+      },
+      "Width": "5.9167in",
+      "Body": {
+        "Height": "0.9896in",
+        "ReportItems": [
+          {
+            "Type": "table",
+            "Name": "Table1",
+            "TableColumns": [
+              {
+                "Width": "1in"
+              },
+              {
+                "Width": "1in"
+              },
+              {
+                "Width": "1in"
+              },
+              {
+                "Width": "1in"
+              },
+              {
+                "Width": "1in"
+              }
+            ],
+            "Header": {
+              "TableRows": [
+                {
+                  "Height": "0.25in",
+                  "TableCells": [
+                    {
+                      "Item": {
+                        "Type": "textbox",
+                        "Name": "TextBox1",
+                        "CanGrow": true,
+                        "KeepTogether": true,
+                        "Value": "floor_name",
+                        "Style": {
+                          "PaddingLeft": "2pt",
+                          "PaddingRight": "2pt",
+                          "PaddingTop": "2pt",
+                          "PaddingBottom": "2pt"
+                        },
+                        "Width": "1in",
+                        "Height": "0.25in"
+                      }
+                    },
+                    {
+                      "Item": {
+                        "Type": "textbox",
+                        "Name": "TextBox2",
+                        "CanGrow": true,
+                        "KeepTogether": true,
+                        "Value": "floor_num",
+                        "Style": {
+                          "PaddingLeft": "2pt",
+                          "PaddingRight": "2pt",
+                          "PaddingTop": "2pt",
+                          "PaddingBottom": "2pt"
+                        },
+                        "Width": "1in",
+                        "Height": "0.25in"
+                      }
+                    },
+                    {
+                      "Item": {
+                        "Type": "textbox",
+                        "Name": "TextBox3",
+                        "CanGrow": true,
+                        "KeepTogether": true,
+                        "Value": "floor_elevator",
+                        "Style": {
+                          "PaddingLeft": "2pt",
+                          "PaddingRight": "2pt",
+                          "PaddingTop": "2pt",
+                          "PaddingBottom": "2pt"
+                        },
+                        "Width": "1in",
+                        "Height": "0.25in"
+                      }
+                    },
+                    {
+                      "Item": {
+                        "Type": "textbox",
+                        "Name": "TextBox4",
+                        "CanGrow": true,
+                        "KeepTogether": true,
+                        "Value": "floor_area",
+                        "Style": {
+                          "PaddingLeft": "2pt",
+                          "PaddingRight": "2pt",
+                          "PaddingTop": "2pt",
+                          "PaddingBottom": "2pt"
+                        },
+                        "Width": "1in",
+                        "Height": "0.25in"
+                      }
+                    },
+                    {
+                      "Item": {
+                        "Type": "textbox",
+                        "Name": "TextBox5",
+                        "CanGrow": true,
+                        "KeepTogether": true,
+                        "Value": "floor_added_date",
+                        "Style": {
+                          "PaddingLeft": "2pt",
+                          "PaddingRight": "2pt",
+                          "PaddingTop": "2pt",
+                          "PaddingBottom": "2pt"
+                        },
+                        "Width": "1in",
+                        "Height": "0.25in"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "RepeatOnNewPage": true
+            },
+            "Details": {
+              "TableRows": [
+                {
+                  "Height": "0.25in",
+                  "TableCells": [
+                    {
+                      "Item": {
+                        "Type": "textbox",
+                        "Name": "TextBox6",
+                        "DataElementName": "floor_name",
+                        "CanGrow": true,
+                        "KeepTogether": true,
+                        "Value": "=Fields!floor_name.Value",
+                        "Style": {
+                          "PaddingLeft": "2pt",
+                          "PaddingRight": "2pt",
+                          "PaddingTop": "2pt",
+                          "PaddingBottom": "2pt"
+                        },
+                        "Width": "1in",
+                        "Height": "0.25in"
+                      }
+                    },
+                    {
+                      "Item": {
+                        "Type": "textbox",
+                        "Name": "TextBox7",
+                        "DataElementName": "floor_num",
+                        "CanGrow": true,
+                        "KeepTogether": true,
+                        "Value": "=Fields!floor_num.Value",
+                        "Style": {
+                          "PaddingLeft": "2pt",
+                          "PaddingRight": "2pt",
+                          "PaddingTop": "2pt",
+                          "PaddingBottom": "2pt"
+                        },
+                        "Width": "1in",
+                        "Height": "0.25in"
+                      }
+                    },
+                    {
+                      "Item": {
+                        "Type": "textbox",
+                        "Name": "TextBox8",
+                        "DataElementName": "floor_elevator",
+                        "CanGrow": true,
+                        "KeepTogether": true,
+                        "Value": "=Fields!floor_elevator.Value",
+                        "Style": {
+                          "PaddingLeft": "2pt",
+                          "PaddingRight": "2pt",
+                          "PaddingTop": "2pt",
+                          "PaddingBottom": "2pt"
+                        },
+                        "Width": "1in",
+                        "Height": "0.25in"
+                      }
+                    },
+                    {
+                      "Item": {
+                        "Type": "textbox",
+                        "Name": "TextBox9",
+                        "DataElementName": "floor_area",
+                        "CanGrow": true,
+                        "KeepTogether": true,
+                        "Value": "=Fields!floor_area.Value",
+                        "Style": {
+                          "PaddingLeft": "2pt",
+                          "PaddingRight": "2pt",
+                          "PaddingTop": "2pt",
+                          "PaddingBottom": "2pt"
+                        },
+                        "Width": "1in",
+                        "Height": "0.25in"
+                      }
+                    },
+                    {
+                      "Item": {
+                        "Type": "textbox",
+                        "Name": "TextBox10",
+                        "DataElementName": "floor_added_date",
+                        "CanGrow": true,
+                        "KeepTogether": true,
+                        "Value": "=Fields!floor_added_date.Value",
+                        "Style": {
+                          "PaddingLeft": "2pt",
+                          "PaddingRight": "2pt",
+                          "PaddingTop": "2pt",
+                          "PaddingBottom": "2pt"
+                        },
+                        "Width": "1in",
+                        "Height": "0.25in"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "Left": "0.9167in",
+            "Top": "0.4896in",
+            "Width": "5in",
+            "Height": "0.5in"
+          }
+        ]
+      }
+    }
+  ],
+  "DataSets": [
+    {
+      "Name": "DataSet",
+      "Fields": [
+        {
+          "Name": "floor_id",
+          "DataField": "floor_id"
+        },
+        {
+          "Name": "building_id",
+          "DataField": "building_id"
+        },
+        {
+          "Name": "floor_name",
+          "DataField": "floor_name"
+        },
+        {
+          "Name": "floor_num",
+          "DataField": "floor_num"
+        },
+        {
+          "Name": "floor_elevator",
+          "DataField": "floor_elevator"
+        },
+        {
+          "Name": "floor_area",
+          "DataField": "floor_area"
+        },
+        {
+          "Name": "floor_added_date",
+          "DataField": "floor_added_date"
+        },
+        {
+          "Name": "created_at",
+          "DataField": "created_at"
+        },
+        {
+          "Name": "updated_at",
+          "DataField": "updated_at"
+        },
+        {
+          "Name": "buildings.building_id",
+          "DataField": "buildings.building_id"
+        },
+        {
+          "Name": "buildings.building_name",
+          "DataField": "buildings.building_name"
+        },
+        {
+          "Name": "buildings.building_email",
+          "DataField": "buildings.building_email"
+        },
+        {
+          "Name": "buildings.building_contact_number",
+          "DataField": "buildings.building_contact_number"
+        },
+        {
+          "Name": "buildings.building_address",
+          "DataField": "buildings.building_address"
+        },
+        {
+          "Name": "buildings.building_security_guard_mobile",
+          "DataField": "buildings.building_security_guard_mobile"
+        },
+        {
+          "Name": "buildings.building_secrataty_mobile",
+          "DataField": "buildings.building_secrataty_mobile"
+        },
+        {
+          "Name": "buildings.building_moderator_mobile",
+          "DataField": "buildings.building_moderator_mobile"
+        },
+        {
+          "Name": "buildings.building_make_year",
+          "DataField": "buildings.building_make_year"
+        },
+        {
+          "Name": "buildings.building_image",
+          "DataField": "buildings.building_image"
+        },
+        {
+          "Name": "buildings.building_status",
+          "DataField": "buildings.building_status"
+        },
+        {
+          "Name": "buildings.building_company_name",
+          "DataField": "buildings.building_company_name"
+        },
+        {
+          "Name": "buildings.building_company_phone",
+          "DataField": "buildings.building_company_phone"
+        },
+        {
+          "Name": "buildings.building_company_address",
+          "DataField": "buildings.building_company_address"
+        },
+        {
+          "Name": "buildings.building_rule",
+          "DataField": "buildings.building_rule"
+        },
+        {
+          "Name": "buildings.created_at",
+          "DataField": "buildings.created_at"
+        },
+        {
+          "Name": "buildings.updated_at",
+          "DataField": "buildings.updated_at"
+        }
+      ],
+      "Query": {
+        "DataSourceName": "DataSource",
+        "CommandText": "jpath=$.*"
+      },
+      "CaseSensitivity": "Auto",
+      "KanatypeSensitivity": "Auto",
+      "AccentSensitivity": "Auto",
+      "WidthSensitivity": "Auto"
+    }
+  ]
+}
