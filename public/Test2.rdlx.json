@@ -1,34 +1,21 @@
 {
-  "Name": "multisectionreport1",
-  "Width": "0in",
+  "Name": "Test",
+  "Width": "8.5in",
   "Layers": [
     {
       "Name": "default"
     }
   ],
-  "CustomProperties": [
-    {
-      "Name": "DisplayType",
-      "Value": "Page"
-    },
-    {
-      "Name": "SizeType",
-      "Value": "Default"
-    },
-    {
-      "Name": "PaperOrientation",
-      "Value": "Portrait"
-    }
-  ],
+  "CustomProperties": [],
   "Page": {
     "PageWidth": "8.5in",
     "PageHeight": "11in",
-    "RightMargin": "0in",
-    "LeftMargin": "0in",
-    "TopMargin": "0in",
-    "BottomMargin": "0in",
+    "RightMargin": "1in",
+    "LeftMargin": "1in",
+    "TopMargin": "1in",
+    "BottomMargin": "1in",
     "Columns": 1,
-    "ColumnSpacing": "0.5in"
+    "ColumnSpacing": "0in"
   },
   "ReportSections": [
     {
@@ -44,9 +31,34 @@
         "Columns": 1,
         "ColumnSpacing": "0in"
       },
-      "Width": "2pt",
+      "Width": "100%",
       "Body": {
-        "Height": "2pt"
+        "Height": "100%",
+        "ReportItems": [
+          {
+            "Type": "Textbox",
+            "Name": "TitleTextbox", 
+            "Value": "Report with Fake Data",
+            "Style": {
+              "FontSize": "16pt",
+              "FontWeight": "bold"
+            }
+          },
+          {
+            "Type": "Table",
+            "DataSetName": "endpoint1", 
+            "TableColumns": [
+              {
+                "Field": "id",
+                "Title": "ID"
+              },
+              {
+                "Field": "name",
+                "Title": "Name"
+              }
+            ]
+          }
+        ]
       }
     }
   ]

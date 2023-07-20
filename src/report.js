@@ -1,38 +1,5 @@
-
-import React from 'react';
-import { Viewer } from '@grapecity/activereports-react';
-import '@grapecity/activereports/styles/ar-js-ui.css';
-import '@grapecity/activereports/styles/ar-js-viewer.css';
-import { useState, useEffect } from 'react';
-import axios from "axios"
-import createReportDefinition from './report';
-const ActiveReport = () => {
-
-
-   const dataFields = [
-     "floor_name",
-     "floor_num",
-     "floor_elevator",
-     "floor_area",
-     "floor_added_date",
-   ];
-
-/*  const dataFields = [
-    "productId",
-    "startDate",
-    "endDate",
-    "standardCost",
-    "modifiedDate",
-  ];*/
-
-
-  const endpoint = "http://127.0.0.1:8000/api/listFloorBuilding/1"
- // const endpoint = "https://demodata.grapecity.com/adventureworks/api/v1/productCostHistories"
-
-
-  const report = createReportDefinition(endpoint, dataFields);
-
-  /*const report = {
+const createReportDefinition = (endpoint, dataFields) => {
+  return {
     Name: "multisectionreport1",
     Width: "0in",
     Layers: [{ Name: "default" }],
@@ -158,21 +125,7 @@ const ActiveReport = () => {
         WidthSensitivity: "Auto"
       }
     ]
-  };*/
+  };
+};
 
-
-  return (<>
-
-    <>
-
-      <div className="demo-app" style={{ height: '800px' }}>
-
-        <Viewer report={{ Uri: report }} />
-
-      </div>
-
-    </>
-  </>);
-}
-
-export default ActiveReport;
+export default createReportDefinition;
